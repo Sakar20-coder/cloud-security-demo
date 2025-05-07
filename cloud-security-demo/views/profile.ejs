@@ -1,0 +1,22 @@
+<%- include('header') %>
+    <section class="profile">
+        <h1>User Profile</h1>
+        <div class="profile-card">
+            <p><strong>ID:</strong> <%= user.id %></p>
+            <p><strong>Username:</strong> <%= user.username %></p>
+            <p><strong>Email:</strong> <%= user.email %></p>
+            <p><strong>Role:</strong> <span class="role <%= user.role %>"><%= user.role %></span></p>
+        </div>
+
+        <div class="vulnerability-demo">
+            <h2>Security Issue Demonstration</h2>
+            <p>Try changing the URL to access other users' profiles:</p>
+            <div class="url-examples">
+                <code>/profile/1</code>
+                <code>/profile/2</code>
+                <code>/profile/3</code>
+            </div>
+            <p>Or try accessing the <a href="/admin" class="admin-link">admin panel</a> without proper permissions.</p>
+        </div>
+    </section>
+<%- include('footer') %>

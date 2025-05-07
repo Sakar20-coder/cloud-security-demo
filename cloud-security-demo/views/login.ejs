@@ -1,0 +1,21 @@
+<%- include('header') %>
+    <section class="auth-form">
+        <h1>Login</h1>
+        <% if (error) { %>
+            <div class="alert error"><%= error %></div>
+        <% } %>
+        <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <div class="demo-credentials">
+            <p>Try these credentials:</p>
+            <ul>
+                <li>alice / pass123</li>
+                <li>bob / bobpass</li>
+                <li>admin / admin123</li>
+            </ul>
+        </div>
+    </section>
+<%- include('footer') %>
